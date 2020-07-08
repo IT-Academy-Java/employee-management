@@ -7,6 +7,20 @@
 <body>
     <h1>EMPLOYEE MANAGEMENT</h1>
     <h3>HTTP Simple Server</h3>
-    <p th:text="Saludos"></p>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Job</th>
+        </tr>
+        <tr th:each="employee : ${employeeList}">
+            <td> <span th:text="${employee.ID}"></span> </td>
+            <td> <span th:text="${employee.name}"></span> </td>
+            <td> <span th:text="${employee.surname}"></span> </td>
+            <td> <span th:text="${employee.job}"></span> </td>
+        </tr>
+    </table>
 </body>
 </html>
