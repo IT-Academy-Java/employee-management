@@ -31,6 +31,7 @@ public class Controller {
         employeeList.add(new Employee("Arto", "Tomasini", "disseny"));
         employeeList.add(new Employee("Merlin", "Tomasini", "office"));
 
+
         // ArrayList<Employee> employeeArrayList = (ArrayList<Employee>) Arrays.asList(employee, employee2);
 
         //model.addAttribute("employee", employee);
