@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <title th:text="${title}">The Title</title>
 </head>
 <body>
+<h1 th:text="${title}"></h1>
 
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Job</th>
+      <th>Created</th>
+  </tr>
+  </thead>
+  <tr th:each="employee : ${employees}">
+    <td><span th:text="${employee.id}"></span></td>
+    <td><span th:text="${employee.name}"></span></td>
+    <td><span th:text="${employee.surname}"></span></td>
+    <td><span th:text="${employee.job}"></span></td>
+    <td><span th:text="${employee.createAt}"></span></td>
+  </tr>
+</table>
+</div>
 </body>
 </html>
