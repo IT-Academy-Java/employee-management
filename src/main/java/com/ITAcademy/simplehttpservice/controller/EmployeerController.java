@@ -13,7 +13,7 @@ public class EmployeerController {
     @Autowired
     private IEmployeeDAO iEmployeeDAO;
 
-    @RequestMapping(value = "list", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(Model model){
         model.addAttribute("title", "Employees list");
         model.addAttribute("employees", iEmployeeDAO.findAll());
