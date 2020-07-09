@@ -1,16 +1,18 @@
 package com.ITAcademy.simplehttpservice.controller;
 
-import com.ITAcademy.simplehttpservice.domain.Employee;
+import com.ITAcademy.simplehttpservice.model.entity.Employee;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 
 @org.springframework.stereotype.Controller
-public class Controller {
+public class EmployeeController {
 
     @GetMapping("/")
     public String init(Model model){
+
+        Employee em = new Employee();
 
         Employee employee1 = new Employee();
         employee1.setName("Elena");

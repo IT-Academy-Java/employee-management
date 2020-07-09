@@ -1,4 +1,4 @@
-package com.ITAcademy.simplehttpservice.model;
+package com.ITAcademy.simplehttpservice.model.entity;
 
 import lombok.Data;
 

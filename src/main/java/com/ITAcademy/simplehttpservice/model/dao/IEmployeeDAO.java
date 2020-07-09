@@ -1,5 +1,7 @@
-package com.ITAcademy.simplehttpservice.dao;
+package com.ITAcademy.simplehttpservice.model.dao;
 
+
+import com.ITAcademy.simplehttpservice.model.entity.Employee;
 
 import java.util.List;
 
