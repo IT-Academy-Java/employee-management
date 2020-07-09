@@ -1,11 +1,10 @@
-package com.ITAcademy.simplehttpservice;
+package com.ITAcademy.simplehttpservice.controller;
 
-import domain.Employee;
+import com.ITAcademy.simplehttpservice.domain.Employee;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 @org.springframework.stereotype.Controller
 public class Controller {

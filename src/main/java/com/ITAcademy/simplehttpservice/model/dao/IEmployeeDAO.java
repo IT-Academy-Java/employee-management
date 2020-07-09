@@ -1,6 +1,5 @@
-package com.ITAcademy.simplehttpservice;
+package com.ITAcademy.simplehttpservice.dao;
 
-import domain.Employee;
 
 import java.util.List;
 

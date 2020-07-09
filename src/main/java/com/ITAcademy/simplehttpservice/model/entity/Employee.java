@@ -1,4 +1,4 @@
-package domain;
+package com.ITAcademy.simplehttpservice.model;
 
 import lombok.Data;
 
