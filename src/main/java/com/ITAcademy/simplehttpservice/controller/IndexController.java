@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.ArrayList;
 
 @org.springframework.stereotype.Controller
-public class EmployeeController {
+public class IndexController {
 
     @GetMapping("/")
     public String init(Model model){
