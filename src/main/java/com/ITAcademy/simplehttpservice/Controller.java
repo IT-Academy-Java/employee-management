@@ -26,11 +26,6 @@ public class Controller {
         ArrayList<Employee> employeeList = new ArrayList();
         employeeList.add(employee1);
         employeeList.add(employee2);
-        employeeList.add(new Employee("Carlos", "Tomasini", "digital"));
-        employeeList.add(new Employee("Bicho", "Tomasini", "art"));
-        employeeList.add(new Employee("Arto", "Tomasini", "disseny"));
-        employeeList.add(new Employee("Merlin", "Tomasini", "office"));
-
 
         // ArrayList<Employee> employeeArrayList = (ArrayList<Employee>) Arrays.asList(employee, employee2);
 
