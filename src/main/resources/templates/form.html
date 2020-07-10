@@ -16,26 +16,59 @@
           crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1 th:text="${title}"></h1>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Employees Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/list}">List employees <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/create">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/list}">Read <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/update}">Update <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/edit}">Delete <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <h1 th:text="${title}" class="text-primary border border-success border-top-0 border-left-0 border-right-0"></h1>
   <form th:action="@{/create}" th:object="${employee}" method="post">
     <label for="name">Name</label><br>
-    <input type="text" th:field="*{name}" id="name" name="name" placeholder="John"><br>
+    <input class="form-control" type="text" th:field="*{name}" id="name" name="name" placeholder="John"><br>
 
     <label for="surname">Surname</label><br>
-    <input type="text" th:field="*{surname}" id="surname" name="surname" placeholder="Doe"><br>
+    <input class="form-control" type="text" th:field="*{surname}" id="surname" name="surname" placeholder="Doe"><br>
 
     <label for="job">Job</label><br>
-    <select id="job" name="job">
+    <select class="form-control" id="job" name="job">
       <option value="ceo">CEO</option>
       <option value="rrhh">RRHH</option>
       <option value="developer" selected>Software developer</option>
       <option value="enginyer">Software enginyer</option>
     </select> <br>
 
-
-
-    <input type="submit" value="Submit">
-    <input type="hidden" th:field="*{id}"/>
+    <input class="form-control btn btn-primary" type="submit" value="Add Employee">
+    <input class="form-control" type="hidden" th:field="*{id}"/>
   </form>
+</div>
 </body>
 </html>
