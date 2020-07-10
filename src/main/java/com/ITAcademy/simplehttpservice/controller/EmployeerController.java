@@ -28,7 +28,7 @@ public class EmployeerController {
         Employee employee = new Employee();
         model.put("employee", employee);
         model.put("title", "Employee Form");
-        return "create";
+        return "form";
     }
 
     @RequestMapping(value="/create", method = RequestMethod.POST)
