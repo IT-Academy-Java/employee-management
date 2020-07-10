@@ -1,4 +1,5 @@
 # Employee Management
+![Demo-CRUD](./src/main/resources/static/demo-crud.png)
 
 ## Objectius
 - Conèixer un servei HTTP al complet 
