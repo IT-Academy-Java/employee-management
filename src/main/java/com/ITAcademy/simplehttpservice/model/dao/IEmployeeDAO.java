@@ -8,5 +8,18 @@ import java.util.List;
 
 @Component
 public interface IEmployeeDAO {
+
+    // CRUD Methods
+
+    // Create
+    public void create(Employee employee);
+
+    // Read
     public List<Employee> findAll();
+
+    // Update
+    // Delete
+
+
+
 }

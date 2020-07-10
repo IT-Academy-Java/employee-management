@@ -14,8 +14,14 @@ public class EmployeeDAOImplement implements IEmployeeDAO{
     @PersistenceContext
     private EntityManager em;
 
-    @Transactional(readOnly = true)
     @Override
+    @Transactional
+    public void create(Employee employee) {
+        em.persist(employee);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public List<Employee> findAll() {
         return em.createQuery("from Employee").getResultList();
     }
