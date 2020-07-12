@@ -66,6 +66,9 @@
       <option value="enginyer">Software enginyer</option>
     </select> <br>
 
+    <label for="date">Date</label><br>
+    <input class="form-control" type="text" th:field="*{createAt}" id="date" name="date" placeholder="20-10-2020"><br>
+
     <input class="form-control btn btn-primary" type="submit" value="Add Employee">
     <input class="form-control" type="hidden" th:field="*{id}"/>
   </form>

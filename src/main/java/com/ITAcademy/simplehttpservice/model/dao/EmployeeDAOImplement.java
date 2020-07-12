@@ -17,7 +17,11 @@ public class EmployeeDAOImplement implements IEmployeeDAO{
     @Override
     @Transactional
     public void create(Employee employee) {
-        em.persist(employee);
+        if(employee.getId() != null && employee.getId() > 0){
+            em.merge((employee));
+        } else{
+            em.persist(employee);
+        }
     }
 
     @Override
