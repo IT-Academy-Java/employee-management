@@ -61,7 +61,7 @@
       <td><span th:text="${employee.job}"></span></td>
       <td><span th:text="${employee.createAt}"></span></td>
       <td><span><a class="btn btn-primary btn-xs" th:href="@{/edit/} + ${employee.id}">Edit</a></span></td>
-      <td><span><a class="btn btn-danger btn-xs" th:href="@{/delete/} + ${employee.id}">Delete</a></span></td>
+      <td><span><a class="btn btn-danger btn-xs" th:href="@{/delete/} + ${employee.id}" onclick="return confirm('Do you want to delete Employee?')">Delete</a></span></td>
     </tr>
   </table>
 </div>
