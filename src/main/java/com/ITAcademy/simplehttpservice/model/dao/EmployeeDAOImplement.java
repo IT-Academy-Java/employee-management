@@ -17,12 +17,21 @@ public class EmployeeDAOImplement implements IEmployeeDAO{
     @Override
     @Transactional
     public void create(Employee employee) {
-        em.persist(employee);
+        if(employee.getId() != null && employee.getId() > 0){
+            em.merge((employee));
+        } else{
+            em.persist(employee);
+        }
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<Employee> findAll() {
         return em.createQuery("from Employee").getResultList();
+    }
+
+    @Override
+    public Employee findOne(Long id) {
+        return em.find(Employee.class, id);
     }
 }

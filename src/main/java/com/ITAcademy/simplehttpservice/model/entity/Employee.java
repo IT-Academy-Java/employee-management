@@ -16,13 +16,10 @@ public class Employee {
     private String name;
     private String surname;
     private String job;
+
     @Column(name="create_at")
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date createAt;
 
-    @PrePersist
-    public void prePersist(){
-        createAt = new Date();
-    }
 }
