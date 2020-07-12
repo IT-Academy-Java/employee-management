@@ -31,7 +31,16 @@ public class EmployeeDAOImplement implements IEmployeeDAO{
     }
 
     @Override
+    @Transactional
     public Employee findOne(Long id) {
         return em.find(Employee.class, id);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        // get employee to delete
+        //Employee employee = findOne(id);
+        em.remove(findOne(id));
     }
 }
