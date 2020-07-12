@@ -18,6 +18,8 @@ public interface IEmployeeDAO {
     public List<Employee> findAll();
 
     // Update
+    public Employee findOne(Long id);
+
     // Delete
 
 
