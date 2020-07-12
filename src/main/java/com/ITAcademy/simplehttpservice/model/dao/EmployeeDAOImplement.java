@@ -25,4 +25,9 @@ public class EmployeeDAOImplement implements IEmployeeDAO{
     public List<Employee> findAll() {
         return em.createQuery("from Employee").getResultList();
     }
+
+    @Override
+    public Employee findOne(Long id) {
+        return em.find(Employee.class, id);
+    }
 }
