@@ -5,6 +5,7 @@ import com.ITAcademy.simplehttpservice.model.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,5 +36,19 @@ public class EmployeerController {
     public String save(Employee employee){
         iEmployeeDAO.create(employee);
         return "redirect:list";
+    }
+
+    @RequestMapping(value = "/edit/{id}")
+    public String edit(@PathVariable(value = "id") Long id, Map<String, Object> model){
+        Employee employee = null;
+        if(id > 0){
+            employee = iEmployeeDAO.findOne(id);
+        } else{
+            return "redirect:list";
+        }
+
+        model.put("employee", employee);
+        model.put("title", "Edit employee");
+        return "form";
     }
 }
