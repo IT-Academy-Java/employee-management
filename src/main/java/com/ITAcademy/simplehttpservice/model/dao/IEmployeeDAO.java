@@ -21,7 +21,6 @@ public interface IEmployeeDAO {
     public Employee findOne(Long id);
 
     // Delete
-
-
+    public void delete(Long id);
 
 }
